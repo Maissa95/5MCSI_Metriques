@@ -31,8 +31,8 @@
           var chart = new google.visualization.Histogram(document.getElementById('chart_div'));
           chart.draw(dataTable, options);
         }
-        // Récupération de données depuis notre API /histogramme/
-        fetch('/histogramme/')
+        // Récupération de données depuis notre API /paris/
+        fetch('/paris/')
           .then(response => response.json())
           .then(data => {
             drawChart(data);
