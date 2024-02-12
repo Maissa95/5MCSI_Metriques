@@ -1,5 +1,5 @@
 from flask import Flask, render_template_string, render_template, jsonify
-import requests
+#import requests
 from flask import render_template
 from flask import json
 from datetime import datetime
@@ -9,6 +9,7 @@ import sqlite3
 app = Flask(__name__)  
 
 # Fonction pour récupérer les données sur les commits depuis l'API GitHub
+
 def get_commit_data():
     url = 'https://api.github.com/repos/OpenRSI/5MCSI_Metriques/commits'
     response = requests.get(url)
@@ -19,6 +20,7 @@ def get_commit_data():
         return None
 
 # Fonction pour extraire les minutes d'une date formatée
+
 @app.route('/extract-minutes/<date_string>')
 def extract_minutes(date_string):
     date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%SZ')
