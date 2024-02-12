@@ -1,8 +1,8 @@
 from flask import Flask, render_template_string, render_template, jsonify
-#import requests
 from flask import render_template
 from flask import json
 from datetime import datetime
+import requests
 from urllib.request import urlopen
 import sqlite3
                                                                                                                                        
