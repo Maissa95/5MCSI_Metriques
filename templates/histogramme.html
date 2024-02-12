@@ -27,8 +27,8 @@
       chart.draw(dataTable, options);
     }
 
-    // Récupération de données depuis notre API /paris/
-    fetch('/paris/')
+    // Récupération de données depuis notre API /histogramme/
+    fetch('/histogramme/')
       .then(response => response.json())
       .then(data => {
         drawChart(data);
